@@ -14,7 +14,7 @@ Log messages vary in structure and complexity. Traditional models fail when:
 **Our hybrid system dynamically chooses the right tool for each type of pattern.**
 ## 🧠 Classification Strategy
 
-![Classification Flowchart]("C:\Users\Santhosh\Downloads\flowchartLOGCLASSification.png")
+![Classification Flowchart](resources/flowchartLOGCLASSification.png)
 
 
 ## ⚙️ Hybrid Components
@@ -36,21 +36,34 @@ Log messages vary in structure and complexity. Traditional models fail when:
 - Fallback for hard-to-classify logs
 
 ---
+**Folder Structure
 
-project-root/
-│
-├── training/              # Code for Regex, SentenceTransformer, and Logistic Regression
-│   ├── regex_classifier.py
-│   ├── bert_classifier.py
-│   └── clustering.py
-│
-├── exported_models/       # Saved embeddings and logistic regression model
-│   ├── model.joblib
-│   └── sentence_embeddings/
-│
-├── resources/             # CSV datasets, outputs, images, and logs
-│   ├── input.csv
-│   └── output.csv
-│
-├── server.py              # FastAPI server
-└── requirements.txt       # List of dependencies
+training/:**
+Contains the code for training models using Sentence Transformer and Logistic Regression.
+Includes the code for regex-based classification.
+
+**models/:**
+Stores the saved models, including Sentence Transformer embeddings and the Logistic Regression model.
+
+**resources/:**
+This folder contains resource files such as test CSV files, output files, images, etc.
+
+**Root Directory:**
+Contains the FastAPI server code (server.py).
+
+**Setup Instructions**
+Install Dependencies: Make sure you have Python installed on your system. Install the required Python libraries by running the following command:
+
+pip install -r requirements.txt
+
+**Run the FastAPI Server: To start the server, use the following command:**
+uvicorn server:app --reload
+
+Once the server is running, you can access the API at:
+
+**Usage**
+Upload a CSV file containing logs to the FastAPI endpoint for classification. Ensure the file has the following columns:
+
+source
+log_message
+The output will be a CSV file with an additional column target_label, which represents the classified label for each log entry.
