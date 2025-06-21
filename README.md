@@ -14,7 +14,7 @@ Log messages vary in structure and complexity. Traditional models fail when:
 **Our hybrid system dynamically chooses the right tool for each type of pattern.**
 ## 🧠 Classification Strategy
 
-![Classification Flowchart](resources/flowchartLOGCLASSification.png)
+![Classification Flowchart](Resources/flowchartLOGCLASSification.png)
 
 
 ## ⚙️ Hybrid Components
@@ -36,9 +36,9 @@ Log messages vary in structure and complexity. Traditional models fail when:
 - Fallback for hard-to-classify logs
 
 ---
-**Folder Structure
+****Folder Structure**
 
-training/:**
+**training/:****
 Contains the code for training models using Sentence Transformer and Logistic Regression.
 Includes the code for regex-based classification.
 
