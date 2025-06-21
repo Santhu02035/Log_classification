@@ -12,28 +12,10 @@ Log messages vary in structure and complexity. Traditional models fail when:
 - Complex semantic understanding is required
 
 **Our hybrid system dynamically chooses the right tool for each type of pattern.**
+## 🧠 Classification Strategy
 
-##  Classification Strategy
----
+![Classification Flowchart]("C:\Users\Santhosh\Downloads\flowchartLOGCLASSification.png".png)
 
-                   +----------------------+
-                   |    Log Classification |
-                   +----------+-----------+
-                              |
-                   +----------v-----------+
-                   |   Regex Classification |
-                   +----------+-----------+
-                              |
-             +-------------------------------+
-             |                               |
-     [Valid Class]                     [Unknown Class]
-                                            |
-                       +--------------------+--------------------+
-                       |                                         |
- [Enough Training Samples: Yes]                 [Enough Training Samples: No]
-                       |                                         |
-          → BERT (Sentence Transformer)             → LLM (e.g., OpenAI GPT)
-          + Logistic Regression
 
 ## ⚙️ Hybrid Components
 
