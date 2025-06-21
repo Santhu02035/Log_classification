@@ -13,9 +13,9 @@ Log messages vary in structure and complexity. Traditional models fail when:
 
 **Our hybrid system dynamically chooses the right tool for each type of pattern.**
 
+##  Classification Strategy
 ---
 
-## Classification Strategy
                    +----------------------+
                    |    Log Classification |
                    +----------+-----------+
@@ -32,11 +32,8 @@ Log messages vary in structure and complexity. Traditional models fail when:
                        |                                         |
  [Enough Training Samples: Yes]                 [Enough Training Samples: No]
                        |                                         |
-          → BERT (Sentence Transformer)             → LLM Classification
+          → BERT (Sentence Transformer)             → LLM (e.g., OpenAI GPT)
           + Logistic Regression
-
-
----
 
 ## ⚙️ Hybrid Components
 
